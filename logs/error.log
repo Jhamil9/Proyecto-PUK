@@ -1,0 +1,36 @@
+2025/05/18 14:17:38 [notice] 1#1: using the "epoll" event method
+2025/05/18 14:17:38 [notice] 1#1: nginx/1.27.5
+2025/05/18 14:17:38 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/05/18 14:17:38 [notice] 1#1: OS: Linux 6.8.0-57-generic
+2025/05/18 14:17:38 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/05/18 14:17:38 [notice] 1#1: start worker processes
+2025/05/18 14:17:38 [notice] 1#1: start worker process 28
+2025/05/18 14:17:38 [notice] 1#1: start worker process 29
+2025/05/18 14:18:50 [error] 28#28: *3 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
+2025/05/18 14:19:21 [error] 28#28: *4 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
+2025/05/18 14:19:28 [error] 28#28: *5 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
+2025/05/18 14:19:35 [error] 28#28: *5 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
+2025/05/18 14:22:40 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/05/18 14:22:40 [notice] 28#28: gracefully shutting down
+2025/05/18 14:22:40 [notice] 28#28: exiting
+2025/05/18 14:22:40 [notice] 29#29: gracefully shutting down
+2025/05/18 14:22:40 [notice] 28#28: exit
+2025/05/18 14:22:40 [notice] 29#29: exiting
+2025/05/18 14:22:40 [notice] 29#29: exit
+2025/05/18 14:22:40 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2025/05/18 14:22:40 [notice] 1#1: worker process 29 exited with code 0
+2025/05/18 14:22:40 [notice] 1#1: signal 29 (SIGIO) received
+2025/05/18 14:22:40 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2025/05/18 14:22:40 [notice] 1#1: worker process 28 exited with code 0
+2025/05/18 14:22:40 [notice] 1#1: exit
+2025/05/18 14:22:52 [notice] 1#1: using the "epoll" event method
+2025/05/18 14:22:52 [notice] 1#1: nginx/1.27.5
+2025/05/18 14:22:52 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/05/18 14:22:52 [notice] 1#1: OS: Linux 6.8.0-57-generic
+2025/05/18 14:22:52 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/05/18 14:22:52 [notice] 1#1: start worker processes
+2025/05/18 14:22:52 [notice] 1#1: start worker process 28
+2025/05/18 14:22:52 [notice] 1#1: start worker process 29
+2025/05/18 14:24:38 [error] 28#28: *4 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
+2025/05/18 14:24:47 [error] 28#28: *5 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
+2025/05/18 14:24:47 [error] 28#28: *6 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
