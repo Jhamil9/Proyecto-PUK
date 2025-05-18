@@ -1,8 +1,0 @@
-[nginx-auth]
-enabled = true
-port = http
-filter = nginx-auth
-logpath = /var/log/nginx/access.log
-maxretry = 3
-findtime = 600
-bantime = 3600
