@@ -1,6 +1,6 @@
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.18.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.28
     container_name: elastic
     environment:
       - discovery.type=single-node
@@ -26,7 +26,7 @@ services:
       - elk_network
 
   kibana:
-    image: docker.elastic.co/kibana/kibana:8.18.0
+    image: docker.elastic.co/kibana/kibana:7.17.28
     container_name: kibana
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
