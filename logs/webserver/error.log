@@ -34,3 +34,38 @@
 2025/05/18 14:24:38 [error] 28#28: *4 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
 2025/05/18 14:24:47 [error] 28#28: *5 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
 2025/05/18 14:24:47 [error] 28#28: *6 user "user1": password mismatch, client: 192.168.232.164, server: , request: "GET / HTTP/1.1", host: "192.168.232.163:8080"
+2025/05/20 12:00:10 [notice] 1#1: using the "epoll" event method
+2025/05/20 12:00:10 [notice] 1#1: nginx/1.27.5
+2025/05/20 12:00:10 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/05/20 12:00:10 [notice] 1#1: OS: Linux 6.8.0-59-generic
+2025/05/20 12:00:10 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/05/20 12:00:10 [notice] 1#1: start worker processes
+2025/05/20 12:00:10 [notice] 1#1: start worker process 27
+2025/05/20 12:00:10 [notice] 1#1: start worker process 28
+2025/05/20 12:03:01 [error] 28#28: *2 user "ass" was not found in "/etc/nginx/.htpasswd", client: 192.168.58.1, server: , request: "GET / HTTP/1.1", host: "192.168.58.129:8080"
+2025/05/20 12:08:59 [error] 27#27: *3 user "sedg" was not found in "/etc/nginx/.htpasswd", client: 192.168.58.1, server: , request: "GET / HTTP/1.1", host: "192.168.58.129:8080"
+2025/05/20 12:14:44 [error] 27#27: *4 user "user1": password mismatch, client: 192.168.58.1, server: , request: "GET / HTTP/1.1", host: "192.168.58.129:8080"
+2025/05/20 12:14:49 [error] 27#27: *4 user "user1": password mismatch, client: 192.168.58.1, server: , request: "GET / HTTP/1.1", host: "192.168.58.129:8080"
+2025/05/20 12:15:08 [error] 27#27: *4 user "user1": password mismatch, client: 192.168.58.1, server: , request: "GET / HTTP/1.1", host: "192.168.58.129:8080"
+2025/05/20 12:15:14 [error] 27#27: *4 user "user1": password mismatch, client: 192.168.58.1, server: , request: "GET / HTTP/1.1", host: "192.168.58.129:8080"
+2025/05/20 12:16:38 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2025/05/20 12:16:38 [notice] 27#27: gracefully shutting down
+2025/05/20 12:16:38 [notice] 28#28: gracefully shutting down
+2025/05/20 12:16:38 [notice] 27#27: exiting
+2025/05/20 12:16:38 [notice] 27#27: exit
+2025/05/20 12:16:38 [notice] 28#28: exiting
+2025/05/20 12:16:38 [notice] 28#28: exit
+2025/05/20 12:16:38 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2025/05/20 12:16:38 [notice] 1#1: worker process 27 exited with code 0
+2025/05/20 12:16:38 [notice] 1#1: signal 29 (SIGIO) received
+2025/05/20 12:16:38 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2025/05/20 12:16:38 [notice] 1#1: worker process 28 exited with code 0
+2025/05/20 12:16:38 [notice] 1#1: exit
+2025/05/20 12:18:23 [notice] 1#1: using the "epoll" event method
+2025/05/20 12:18:23 [notice] 1#1: nginx/1.27.5
+2025/05/20 12:18:23 [notice] 1#1: built by gcc 12.2.0 (Debian 12.2.0-14) 
+2025/05/20 12:18:23 [notice] 1#1: OS: Linux 6.8.0-59-generic
+2025/05/20 12:18:23 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2025/05/20 12:18:23 [notice] 1#1: start worker processes
+2025/05/20 12:18:23 [notice] 1#1: start worker process 28
+2025/05/20 12:18:23 [notice] 1#1: start worker process 29

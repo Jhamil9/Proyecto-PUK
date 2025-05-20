@@ -1,0 +1,30 @@
+2025-05-20 12:20:07,237 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-20 12:20:07,239 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-20 12:20:07,241 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-20 12:20:07,259 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-20 12:20:07,261 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-05-20 12:20:07,263 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-20 12:20:07,264 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-auth'
+2025-05-20 12:20:07,289 fail2ban.jail           [1]: INFO    Jail 'nginx-auth' uses pyinotify {}
+2025-05-20 12:20:07,296 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-20 12:20:07,298 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-20 12:20:07,298 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-20 12:20:07,299 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-20 12:20:07,300 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-20 12:20:07,301 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/nginx/access.log' (pos = 0, hash = 297341890a5062bc43f51cf9c8a992f3815669d7)
+2025-05-20 12:20:07,316 fail2ban.jail           [1]: INFO    Jail 'nginx-auth' started
+2025-05-20 12:20:07,348 fail2ban.filter         [1]: INFO    [nginx-auth] Found 192.168.58.1 - 2025-05-20 12:14:44
+2025-05-20 12:20:07,348 fail2ban.filter         [1]: INFO    [nginx-auth] Found 192.168.58.1 - 2025-05-20 12:14:49
+2025-05-20 12:20:07,349 fail2ban.filter         [1]: INFO    [nginx-auth] Found 192.168.58.1 - 2025-05-20 12:15:08
+2025-05-20 12:20:07,351 fail2ban.filter         [1]: INFO    [nginx-auth] Found 192.168.58.1 - 2025-05-20 12:15:14
+2025-05-20 12:20:07,520 fail2ban.actions        [1]: NOTICE  [nginx-auth] Ban 192.168.58.1
+2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- exec: iptables -w -N f2b-nginx-auth
+iptables -w -A f2b-nginx-auth -j RETURN
+iptables -w -I INPUT -p tcp -m multiport --dports http -j f2b-nginx-auth
+2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- stderr: '/bin/sh: 1: iptables: not found'
+2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- stderr: '/bin/sh: 2: iptables: not found'
+2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- stderr: '/bin/sh: 3: iptables: not found'
+2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- returned 127
+2025-05-20 12:20:07,530 fail2ban.utils          [1]: INFO    HINT on 127: "Command not found".  Make sure that all commands in 'iptables -w -N f2b-nginx-auth\niptables -w -A f2b-nginx-auth -j RETURN\niptables -w -I INPUT -p tcp -m multiport --dports http -j f2b-nginx-auth' are in the PATH of fail2ban-server process (grep -a PATH= /proc/`pidof -x fail2ban-server`/environ). You may want to start "fail2ban-server -f" separately, initiate it with "fail2ban-client reload" in another shell session and observe if additional informative error messages appear in the terminals.
+2025-05-20 12:20:07,532 fail2ban.actions        [1]: ERROR   Failed to execute ban jail 'nginx-auth' action 'iptables-multiport' info 'ActionInfo({'ip': '192.168.58.1', 'family': 'inet4', 'fid': <function Actions.ActionInfo.<lambda> at 0x79eaa6d00430>, 'raw-ticket': <function Actions.ActionInfo.<lambda> at 0x79eaa6d00af0>})': Error starting action Jail('nginx-auth')/iptables-multiport: 'Script error'
+2025-05-20 14:32:36,693 fail2ban.actions        [1]: NOTICE  [nginx-auth] Unban 192.168.58.1
