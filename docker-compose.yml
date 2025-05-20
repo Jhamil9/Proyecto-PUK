@@ -1,15 +1,16 @@
 services:
 # Adaptar al apache 
-  webserver:
-    build: ./nginx
-    container_name: webserver
-    volumes:
-      - ./logs/webserver/error.log:/var/log/nginx/error.log
-      - ./logs/webserver/access.log:/var/log/nginx/access.log 
-    networks:
-      - proyecto_monitoring_net
+  apache:
+    build: ./apache/apache
+    container_name: apache-secure
     ports:
       - "8080:80"
+    volumes:
+      - ./logs/apache/access.log:/var/log/apache2/access.log
+      - ./logs/apache/error.log:/var/log/apache2/error.log
+    networks:
+      - proyecto_monitoring_net
+    restart: unless-stopped
 # Fail2ban Servicio 
   fail2ban:
     build: ./fail2ban
