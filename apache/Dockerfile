@@ -1,45 +1,54 @@
-# 1) Base: Ubuntu 24.04
 FROM ubuntu:24.04
 
-# 2) Instala Apache, ModSecurity, Git y utilidades
+ARG HTPASSWD_USER=admin
+ARG HTPASSWD_PASS=admin
+
+# 1) Instalación de Apache, ModSecurity, utils y apache2-utils
 RUN apt-get update \
  && DEBIAN_FRONTEND=noninteractive apt-get install -y \
       apache2 \
       libapache2-mod-security2 \
+      apache2-utils \
       git \
       wget \
       ca-certificates \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/*
 
-# 3) Habilita el módulo security2 (ModSecurity)
-RUN a2enmod security2
-
-# 4) Activa ModSecurity en modo “On” con acceso a cuerpo de petición
-RUN mv /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf \
- && sed -ri \
-      -e 's/SecRuleEngine DetectionOnly/SecRuleEngine On/' \
-      -e 's/SecRequestBodyAccess Off/SecRequestBodyAccess On/' \
-      /etc/modsecurity/modsecurity.conf
-
-# 5) (¡AJUSTE!) Asegúrate de borrar cualquier clon previo, clona OWASP CRS y prepara las reglas
-RUN rm -rf /etc/modsecurity/crs \
- && git clone --depth 1 \
-      -b v4.14.0 \
+# 2) Limpia cualquier CRS y clona OWASP CRS
+RUN rm -rf /usr/share/modsecurity-crs /etc/modsecurity/crs \
+ && git clone --depth 1 -b v4.14.0 \
       https://github.com/coreruleset/coreruleset.git \
       /etc/modsecurity/crs \
- && cp /etc/modsecurity/crs/crs-setup.conf.example \
-       /etc/modsecurity/crs/crs-setup.conf
+ && cp /etc/modsecurity/crs/crs-setup.conf.example /etc/modsecurity/crs/crs-setup.conf \
+ && rm /etc/modsecurity/crs/crs-setup.conf.example
 
-# 6) Incluye todas las reglas CRS en la configuración de Apache
-RUN echo "\
-# OWASP CRS include\n\
-IncludeOptional /etc/modsecurity/crs/*.conf\n\
-" >> /etc/apache2/conf-available/security2.conf
+# 3) Prepara ModSecurity (carga solo tu setup + reglas)
+RUN printf '%s\n' \
+    "Include /etc/modsecurity/crs/crs-setup.conf" \
+    "IncludeOptional /etc/modsecurity/crs/rules/*.conf" \
+  >> /etc/apache2/conf-available/security2.conf
 
-# 7) Copia tu sitio estático al DocumentRoot
+# 4) Habilita módulos necesarios
+RUN a2enmod security2 auth_basic authn_file \
+ && a2enconf security2
+
+# 5) Copia el .htpasswd (pre‑generado en htpasswd/.htpasswd)
+RUN mkdir -p /etc/apache2/.htpasswd
+COPY htpasswd/.htpasswd /etc/apache2/.htpasswd/.htpasswd
+
+# 6) Copia tu VirtualHost con la auth “in‑line” y los logs
+COPY conf/000-default.conf /etc/apache2/sites-available/000-default.conf
+
+# 7) Desactiva cualquier sitio por defecto y activa el tuyo
+RUN a2dissite 000-default || true \
+ && a2ensite 000-default
+
+# 8) Define ServerName para silenciar el warning
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+# 9) Copia tu web estática
 COPY www/ /var/www/html/
 
-# 8) Exponer puertos y arrancar Apache en primer plano
 EXPOSE 80 443
 CMD ["apachectl", "-D", "FOREGROUND"]
