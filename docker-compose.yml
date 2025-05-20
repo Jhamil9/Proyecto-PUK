@@ -1,15 +1,16 @@
 services:
+# Adaptar al apache 
   webserver:
     build: ./nginx
     container_name: webserver
     volumes:
       - ./logs/error.log:/var/log/nginx/error.log
-      - ./logs/access.log:/var/log/nginx/access.log
+      - ./logs/access.log:/var/log/nginx/access.log 
     networks:
       - proyecto_monitoring_net
     ports:
       - "8080:80"
-
+# Fail2ban Servicio 
   fail2ban:
     build: ./fail2ban
     container_name: fail2ban
@@ -23,6 +24,48 @@ services:
       - NET_ADMIN
       - NET_RAW
     privileged: true
+
+# Zeek servicio 
+
+
+# Elk
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.28
+    container_name: elastic
+    environment:
+      - discovery.type=single-node
+    ports:
+      - 9200:9200
+      - 9300:9300
+    #volumes:
+    #  - esdata:/usr/share/elasticsearch/data
+    networks:
+      - proyecto_monitoring_net
+
+  logstash:
+    build: ./elk/logstash
+    container_name: logstash
+    environment:
+      - ELASTICSEARCH_HOST=elasticsearch
+      - "LOGSTASH_PIPELINE_PATH=/usr/share/logstash/pipeline/logstash.conf"
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5044:5044"
+    networks:
+      - proyecto_monitoring_net
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.28
+    container_name: kibana
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - SERVER_PUBLICBASEURL=http://localhost:5601
+    ports:
+      - 5601:5601
+    networks:
+      - proyecto_monitoring_net
 
 networks:
   proyecto_monitoring_net:
