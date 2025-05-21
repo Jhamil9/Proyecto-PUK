@@ -20,3 +20,4 @@ Resetear Docker
 docker compose up --build
 docker image prune -a --force
 ```
+.
