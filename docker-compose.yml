@@ -1,22 +1,23 @@
 services:
 # Adaptar al apache 
-  apache:
-    build: ./apache/apache
+  webserver:
+    build: ./apache
     container_name: apache-secure
-    ports:
-      - "8080:80"
     volumes:
-      - ./logs/apache/access.log:/var/log/apache2/access.log
       - ./logs/apache/error.log:/var/log/apache2/error.log
+      - ./logs/apache/access.log:/var/log/apache2/access.log 
     networks:
       - proyecto_monitoring_net
-    restart: unless-stopped
+    ports:
+      - "8080:80"
+    dns:
+      - 8.8.8.8
 # Fail2ban Servicio 
   fail2ban:
     build: ./fail2ban
     container_name: fail2ban
     volumes:
-      - ./logs/webserver/access.log:/var/log/nginx/access.log:ro
+      - ./logs/apache/access.log:/var/log/apache2/access.log:ro
       - ./fail2ban/jail.local:/etc/fail2ban/jail.local:ro
       - ./fail2ban/filter.d:/etc/fail2ban/filter.d:ro
       - ./logs/fail2ban/fail2ban.log:/var/log/fail2ban.log 
@@ -27,9 +28,22 @@ services:
       - NET_RAW
     privileged: true
 
-# Zeek servicio 
-
-
+# Port Scanner
+  port-scan-detector:
+    build:
+      context: ./nmap-detector
+      dockerfile: Dockerfile
+    container_name: nmap-detector
+    networks:
+      - proyecto_monitoring_net
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+    volumes:
+      - ./logs/scan:/logs
+    environment:
+      - THRESHOLD=15
+      - TIME_WINDOW=60
 
 # Elk
 
@@ -49,6 +63,8 @@ services:
   logstash:
     build: ./elk/logstash
     container_name: logstash
+    volumes:
+      - ./elk/logstash/eventos.conf:/usr/share/logstash/pipeline/logstash.conf:ro
     environment:
       - ELASTICSEARCH_HOST=elasticsearch
       - "LOGSTASH_PIPELINE_PATH=/usr/share/logstash/pipeline/logstash.conf"
@@ -67,6 +83,18 @@ services:
       - SERVER_PUBLICBASEURL=http://localhost:5601
     ports:
       - 5601:5601
+    networks:
+      - proyecto_monitoring_net
+
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:8.10.3
+    container_name: filebeat
+    user: root
+    volumes:
+      - ./logs:/logs
+      - ./elk/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
+    depends_on:
+      - logstash
     networks:
       - proyecto_monitoring_net
 

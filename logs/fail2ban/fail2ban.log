@@ -1,30 +1,259 @@
-2025-05-20 12:20:07,237 fail2ban.server         [1]: INFO    --------------------------------------------------
-2025-05-20 12:20:07,239 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
-2025-05-20 12:20:07,241 fail2ban.observer       [1]: INFO    Observer start...
-2025-05-20 12:20:07,259 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
-2025-05-20 12:20:07,261 fail2ban.database       [1]: WARNING New database created. Version '4'
-2025-05-20 12:20:07,263 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
-2025-05-20 12:20:07,264 fail2ban.jail           [1]: INFO    Creating new jail 'nginx-auth'
-2025-05-20 12:20:07,289 fail2ban.jail           [1]: INFO    Jail 'nginx-auth' uses pyinotify {}
-2025-05-20 12:20:07,296 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
-2025-05-20 12:20:07,298 fail2ban.filter         [1]: INFO      maxRetry: 3
-2025-05-20 12:20:07,298 fail2ban.filter         [1]: INFO      findtime: 600
-2025-05-20 12:20:07,299 fail2ban.actions        [1]: INFO      banTime: 3600
-2025-05-20 12:20:07,300 fail2ban.filter         [1]: INFO      encoding: UTF-8
-2025-05-20 12:20:07,301 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/nginx/access.log' (pos = 0, hash = 297341890a5062bc43f51cf9c8a992f3815669d7)
-2025-05-20 12:20:07,316 fail2ban.jail           [1]: INFO    Jail 'nginx-auth' started
-2025-05-20 12:20:07,348 fail2ban.filter         [1]: INFO    [nginx-auth] Found 192.168.58.1 - 2025-05-20 12:14:44
-2025-05-20 12:20:07,348 fail2ban.filter         [1]: INFO    [nginx-auth] Found 192.168.58.1 - 2025-05-20 12:14:49
-2025-05-20 12:20:07,349 fail2ban.filter         [1]: INFO    [nginx-auth] Found 192.168.58.1 - 2025-05-20 12:15:08
-2025-05-20 12:20:07,351 fail2ban.filter         [1]: INFO    [nginx-auth] Found 192.168.58.1 - 2025-05-20 12:15:14
-2025-05-20 12:20:07,520 fail2ban.actions        [1]: NOTICE  [nginx-auth] Ban 192.168.58.1
-2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- exec: iptables -w -N f2b-nginx-auth
-iptables -w -A f2b-nginx-auth -j RETURN
-iptables -w -I INPUT -p tcp -m multiport --dports http -j f2b-nginx-auth
-2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- stderr: '/bin/sh: 1: iptables: not found'
-2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- stderr: '/bin/sh: 2: iptables: not found'
-2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- stderr: '/bin/sh: 3: iptables: not found'
-2025-05-20 12:20:07,530 fail2ban.utils          [1]: ERROR   79eaa6e58570 -- returned 127
-2025-05-20 12:20:07,530 fail2ban.utils          [1]: INFO    HINT on 127: "Command not found".  Make sure that all commands in 'iptables -w -N f2b-nginx-auth\niptables -w -A f2b-nginx-auth -j RETURN\niptables -w -I INPUT -p tcp -m multiport --dports http -j f2b-nginx-auth' are in the PATH of fail2ban-server process (grep -a PATH= /proc/`pidof -x fail2ban-server`/environ). You may want to start "fail2ban-server -f" separately, initiate it with "fail2ban-client reload" in another shell session and observe if additional informative error messages appear in the terminals.
-2025-05-20 12:20:07,532 fail2ban.actions        [1]: ERROR   Failed to execute ban jail 'nginx-auth' action 'iptables-multiport' info 'ActionInfo({'ip': '192.168.58.1', 'family': 'inet4', 'fid': <function Actions.ActionInfo.<lambda> at 0x79eaa6d00430>, 'raw-ticket': <function Actions.ActionInfo.<lambda> at 0x79eaa6d00af0>})': Error starting action Jail('nginx-auth')/iptables-multiport: 'Script error'
-2025-05-20 14:32:36,693 fail2ban.actions        [1]: NOTICE  [nginx-auth] Unban 192.168.58.1
+2025-05-21 13:10:32,840 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 13:10:32,842 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 13:10:32,850 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 13:10:32,865 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 13:10:32,877 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 13:10:32,877 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 13:10:32,944 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 13:10:32,958 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 13:10:32,960 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 13:10:32,963 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 13:10:32,964 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 13:10:32,964 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 13:10:32,965 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = da39a3ee5e6b4b0d3255bfef95601890afd80709)
+2025-05-21 13:10:38,602 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 13:10:38,981 fail2ban.actions        [1]: NOTICE  [apache-auth] Restore Ban 192.168.58.1
+2025-05-21 13:10:39,010 fail2ban.utils          [1]: ERROR   7e424ece0d30 -- exec: iptables -w -N f2b-apache-auth
+iptables -w -A f2b-apache-auth -j RETURN
+iptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth
+2025-05-21 13:10:39,017 fail2ban.utils          [1]: ERROR   7e424ece0d30 -- stderr: '/bin/sh: 1: iptables: not found'
+2025-05-21 13:10:39,017 fail2ban.utils          [1]: ERROR   7e424ece0d30 -- stderr: '/bin/sh: 2: iptables: not found'
+2025-05-21 13:10:39,017 fail2ban.utils          [1]: ERROR   7e424ece0d30 -- stderr: '/bin/sh: 3: iptables: not found'
+2025-05-21 13:10:39,017 fail2ban.utils          [1]: ERROR   7e424ece0d30 -- returned 127
+2025-05-21 13:10:39,017 fail2ban.utils          [1]: INFO    HINT on 127: "Command not found".  Make sure that all commands in 'iptables -w -N f2b-apache-auth\niptables -w -A f2b-apache-auth -j RETURN\niptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth' are in the PATH of fail2ban-server process (grep -a PATH= /proc/`pidof -x fail2ban-server`/environ). You may want to start "fail2ban-server -f" separately, initiate it with "fail2ban-client reload" in another shell session and observe if additional informative error messages appear in the terminals.
+2025-05-21 13:10:39,018 fail2ban.actions        [1]: ERROR   Failed to execute ban jail 'apache-auth' action 'iptables-multiport' info 'ActionInfo({'ip': '192.168.58.1', 'family': 'inet4', 'fid': <function Actions.ActionInfo.<lambda> at 0x7e424f650430>, 'raw-ticket': <function Actions.ActionInfo.<lambda> at 0x7e424f650af0>})': Error starting action Jail('apache-auth')/iptables-multiport: 'Script error'
+2025-05-21 13:15:12,033 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 13:15:12,148 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 13:15:12,178 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 13:15:12,218 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 13:15:12,257 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 13:15:12,291 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 13:15:12,295 fail2ban.actions        [1]: NOTICE  [apache-auth] Unban 192.168.58.1
+2025-05-21 13:15:12,476 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 13:15:12,486 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 13:15:12,493 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-05-21 13:15:29,533 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 13:15:29,535 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 13:15:29,536 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 13:15:29,552 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 13:15:29,554 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 13:15:29,557 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 13:15:29,602 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 13:15:29,617 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 13:15:29,619 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 13:15:29,622 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 13:15:29,622 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 13:15:29,622 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 13:15:29,623 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = da39a3ee5e6b4b0d3255bfef95601890afd80709)
+2025-05-21 13:15:33,205 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 13:15:33,634 fail2ban.actions        [1]: NOTICE  [apache-auth] Restore Ban 192.168.58.1
+2025-05-21 13:15:33,683 fail2ban.utils          [1]: ERROR   73106f208d30 -- exec: iptables -w -N f2b-apache-auth
+iptables -w -A f2b-apache-auth -j RETURN
+iptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth
+2025-05-21 13:15:33,688 fail2ban.utils          [1]: ERROR   73106f208d30 -- stderr: '/bin/sh: 1: iptables: not found'
+2025-05-21 13:15:33,689 fail2ban.utils          [1]: ERROR   73106f208d30 -- stderr: '/bin/sh: 2: iptables: not found'
+2025-05-21 13:15:33,690 fail2ban.utils          [1]: ERROR   73106f208d30 -- stderr: '/bin/sh: 3: iptables: not found'
+2025-05-21 13:15:33,692 fail2ban.utils          [1]: ERROR   73106f208d30 -- returned 127
+2025-05-21 13:15:33,694 fail2ban.utils          [1]: INFO    HINT on 127: "Command not found".  Make sure that all commands in 'iptables -w -N f2b-apache-auth\niptables -w -A f2b-apache-auth -j RETURN\niptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth' are in the PATH of fail2ban-server process (grep -a PATH= /proc/`pidof -x fail2ban-server`/environ). You may want to start "fail2ban-server -f" separately, initiate it with "fail2ban-client reload" in another shell session and observe if additional informative error messages appear in the terminals.
+2025-05-21 13:15:33,695 fail2ban.actions        [1]: ERROR   Failed to execute ban jail 'apache-auth' action 'iptables-multiport' info 'ActionInfo({'ip': '192.168.58.1', 'family': 'inet4', 'fid': <function Actions.ActionInfo.<lambda> at 0x73106fb78430>, 'raw-ticket': <function Actions.ActionInfo.<lambda> at 0x73106fb78af0>})': Error starting action Jail('apache-auth')/iptables-multiport: 'Script error'
+2025-05-21 13:17:30,117 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 13:17:30,171 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 13:17:30,201 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 13:17:30,239 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 13:17:30,254 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 13:17:30,548 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 13:17:30,548 fail2ban.actions        [1]: NOTICE  [apache-auth] Unban 192.168.58.1
+2025-05-21 13:17:30,557 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 13:17:30,565 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 13:17:30,569 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-05-21 13:17:54,245 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 13:17:54,246 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 13:17:54,248 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 13:17:54,256 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 13:17:54,259 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 13:17:54,259 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 13:17:54,290 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 13:17:54,295 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 13:17:54,296 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 13:17:54,297 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 13:17:54,297 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 13:17:54,297 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 13:17:54,298 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = da39a3ee5e6b4b0d3255bfef95601890afd80709)
+2025-05-21 13:17:59,523 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 13:18:00,309 fail2ban.actions        [1]: NOTICE  [apache-auth] Restore Ban 192.168.58.1
+2025-05-21 13:18:00,352 fail2ban.utils          [1]: ERROR   7c877569cd30 -- exec: iptables -w -N f2b-apache-auth
+iptables -w -A f2b-apache-auth -j RETURN
+iptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth
+2025-05-21 13:18:00,356 fail2ban.utils          [1]: ERROR   7c877569cd30 -- stderr: '/bin/sh: 1: iptables: not found'
+2025-05-21 13:18:00,367 fail2ban.utils          [1]: ERROR   7c877569cd30 -- stderr: '/bin/sh: 2: iptables: not found'
+2025-05-21 13:18:00,367 fail2ban.utils          [1]: ERROR   7c877569cd30 -- stderr: '/bin/sh: 3: iptables: not found'
+2025-05-21 13:18:00,368 fail2ban.utils          [1]: ERROR   7c877569cd30 -- returned 127
+2025-05-21 13:18:00,369 fail2ban.utils          [1]: INFO    HINT on 127: "Command not found".  Make sure that all commands in 'iptables -w -N f2b-apache-auth\niptables -w -A f2b-apache-auth -j RETURN\niptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth' are in the PATH of fail2ban-server process (grep -a PATH= /proc/`pidof -x fail2ban-server`/environ). You may want to start "fail2ban-server -f" separately, initiate it with "fail2ban-client reload" in another shell session and observe if additional informative error messages appear in the terminals.
+2025-05-21 13:18:00,370 fail2ban.actions        [1]: ERROR   Failed to execute ban jail 'apache-auth' action 'iptables-multiport' info 'ActionInfo({'ip': '192.168.58.1', 'family': 'inet4', 'fid': <function Actions.ActionInfo.<lambda> at 0x7c8776010430>, 'raw-ticket': <function Actions.ActionInfo.<lambda> at 0x7c8776010af0>})': Error starting action Jail('apache-auth')/iptables-multiport: 'Script error'
+2025-05-21 13:29:32,321 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 13:29:32,423 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 13:29:32,465 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 13:29:32,516 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 13:29:32,569 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 13:29:32,676 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 13:29:32,683 fail2ban.actions        [1]: NOTICE  [apache-auth] Unban 192.168.58.1
+2025-05-21 13:29:33,196 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 13:29:33,213 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 13:29:33,222 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-05-21 13:31:39,848 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 13:31:39,850 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 13:31:39,852 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 13:31:39,868 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 13:31:39,871 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-05-21 13:31:39,871 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 13:31:39,871 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 13:31:39,911 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 13:31:39,920 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 13:31:39,921 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 13:31:39,923 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 13:31:39,923 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 13:31:39,925 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 13:31:39,927 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = da39a3ee5e6b4b0d3255bfef95601890afd80709)
+2025-05-21 13:31:39,933 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 13:33:36,798 fail2ban.filter         [1]: INFO    [apache-auth] Found 192.168.58.1 - 2025-05-21 13:33:36
+2025-05-21 13:40:35,546 fail2ban.filter         [1]: INFO    [apache-auth] Found 192.168.58.1 - 2025-05-21 13:40:35
+2025-05-21 13:41:37,465 fail2ban.filter         [1]: INFO    [apache-auth] Found 192.168.58.1 - 2025-05-21 13:41:37
+2025-05-21 13:41:37,529 fail2ban.actions        [1]: NOTICE  [apache-auth] Ban 192.168.58.1
+2025-05-21 13:41:37,591 fail2ban.utils          [1]: ERROR   74e5171e5140 -- exec: iptables -w -N f2b-apache-auth
+iptables -w -A f2b-apache-auth -j RETURN
+iptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth
+2025-05-21 13:41:37,592 fail2ban.utils          [1]: ERROR   74e5171e5140 -- stderr: '/bin/sh: 1: iptables: not found'
+2025-05-21 13:41:37,592 fail2ban.utils          [1]: ERROR   74e5171e5140 -- stderr: '/bin/sh: 2: iptables: not found'
+2025-05-21 13:41:37,592 fail2ban.utils          [1]: ERROR   74e5171e5140 -- stderr: '/bin/sh: 3: iptables: not found'
+2025-05-21 13:41:37,592 fail2ban.utils          [1]: ERROR   74e5171e5140 -- returned 127
+2025-05-21 13:41:37,592 fail2ban.utils          [1]: INFO    HINT on 127: "Command not found".  Make sure that all commands in 'iptables -w -N f2b-apache-auth\niptables -w -A f2b-apache-auth -j RETURN\niptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth' are in the PATH of fail2ban-server process (grep -a PATH= /proc/`pidof -x fail2ban-server`/environ). You may want to start "fail2ban-server -f" separately, initiate it with "fail2ban-client reload" in another shell session and observe if additional informative error messages appear in the terminals.
+2025-05-21 13:41:37,593 fail2ban.actions        [1]: ERROR   Failed to execute ban jail 'apache-auth' action 'iptables-multiport' info 'ActionInfo({'ip': '192.168.58.1', 'family': 'inet4', 'fid': <function Actions.ActionInfo.<lambda> at 0x74e517b4c430>, 'raw-ticket': <function Actions.ActionInfo.<lambda> at 0x74e517b4caf0>})': Error starting action Jail('apache-auth')/iptables-multiport: 'Script error'
+2025-05-21 14:05:27,921 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 14:05:28,046 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 14:05:28,083 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 14:05:28,124 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 14:05:28,156 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 14:05:28,237 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 14:05:28,241 fail2ban.actions        [1]: NOTICE  [apache-auth] Unban 192.168.58.1
+2025-05-21 14:05:28,377 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 14:05:28,402 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 14:05:28,413 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-05-21 14:06:21,535 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 14:06:21,539 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 14:06:21,544 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 14:06:21,585 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 14:06:21,603 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-05-21 14:06:21,612 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 14:06:21,612 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 14:06:21,698 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 14:06:21,725 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 14:06:21,730 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 14:06:21,731 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 14:06:21,733 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 14:06:21,734 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 14:06:21,737 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = ecc3d391cd3bb2d0438610f87c91dbbca38a1251)
+2025-05-21 14:06:21,789 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 14:06:40,269 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 14:06:40,318 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 14:06:40,343 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 14:06:40,386 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 14:06:40,408 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 14:06:40,440 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 14:06:41,018 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 14:06:41,024 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 14:06:41,027 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-05-21 14:08:08,516 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 14:08:08,517 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 14:08:08,519 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 14:08:08,551 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 14:08:08,555 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 14:08:08,562 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 14:08:08,635 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 14:08:08,645 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 14:08:08,646 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 14:08:08,649 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 14:08:08,650 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 14:08:08,650 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 14:08:08,658 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 1415, hash = ecc3d391cd3bb2d0438610f87c91dbbca38a1251)
+2025-05-21 14:08:08,668 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 14:21:05,473 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 14:21:05,627 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 14:21:05,710 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 14:21:05,747 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 14:21:05,798 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 14:21:06,481 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 14:21:06,495 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 14:21:06,512 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 14:21:06,520 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-05-21 14:25:28,620 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 14:25:28,622 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 14:25:28,625 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 14:25:28,656 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 14:25:28,663 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-05-21 14:25:28,666 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 14:25:28,667 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 14:25:28,716 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 14:25:28,727 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 14:25:28,728 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 14:25:28,728 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 14:25:28,729 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 14:25:28,729 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 14:25:28,741 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = ecc3d391cd3bb2d0438610f87c91dbbca38a1251)
+2025-05-21 14:25:28,750 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 14:35:43,699 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 14:35:43,824 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 14:35:43,861 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 14:35:43,901 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 14:35:43,954 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 14:35:44,069 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 14:35:44,188 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 14:35:44,216 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 14:35:44,231 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-05-21 14:44:05,991 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 14:44:05,994 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 14:44:06,001 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 14:44:06,026 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 14:44:06,042 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-05-21 14:44:06,042 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 14:44:06,053 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 14:44:06,117 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 14:44:06,128 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 14:44:06,129 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 14:44:06,129 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 14:44:06,129 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 14:44:06,129 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 14:44:06,146 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = ecc3d391cd3bb2d0438610f87c91dbbca38a1251)
+2025-05-21 14:44:06,184 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 14:45:23,157 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 14:45:23,157 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 14:45:23,180 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 14:45:23,221 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 14:45:23,221 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 14:45:23,532 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 14:45:23,824 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 14:45:23,826 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 14:45:23,827 fail2ban.server         [1]: INFO    Exiting Fail2ban
+2025-05-21 14:48:24,711 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-21 14:48:24,717 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-21 14:48:24,724 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-21 14:48:24,741 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-21 14:48:24,750 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-05-21 14:48:24,755 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-21 14:48:24,755 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-21 14:48:24,846 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-21 14:48:24,868 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-21 14:48:24,869 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-21 14:48:24,870 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-21 14:48:24,870 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-21 14:48:24,870 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-21 14:48:24,877 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = ecc3d391cd3bb2d0438610f87c91dbbca38a1251)
+2025-05-21 14:48:24,948 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-21 14:58:16,717 fail2ban.server         [1]: INFO    Shutdown in progress...
+2025-05-21 14:58:16,805 fail2ban.observer       [1]: INFO    Observer stop ... try to end queue 5 seconds
+2025-05-21 14:58:16,841 fail2ban.observer       [1]: INFO    Observer stopped, 0 events remaining.
+2025-05-21 14:58:16,880 fail2ban.server         [1]: INFO    Stopping all jails
+2025-05-21 14:58:16,921 fail2ban.filter         [1]: INFO    Removed logfile: '/var/log/apache2/access.log'
+2025-05-21 14:58:17,443 fail2ban.actions        [1]: NOTICE  [apache-auth] Flush ticket(s) with iptables-multiport
+2025-05-21 14:58:17,456 fail2ban.jail           [1]: INFO    Jail 'apache-auth' stopped
+2025-05-21 14:58:17,478 fail2ban.database       [1]: INFO    Connection to database closed.
+2025-05-21 14:58:17,485 fail2ban.server         [1]: INFO    Exiting Fail2ban

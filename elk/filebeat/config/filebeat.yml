@@ -1,0 +1,38 @@
+filebeat.inputs:
+  # LOGS de Fail2ban
+- type: log
+  enabled: true
+  paths:
+    - /logs/fail2ban/fail2ban.log
+  fields:
+    type: fail2ban
+
+# Logs de apache
+- type: log
+  enabled: true
+  paths:
+    - /logs/apache/access.log
+  fields:
+    type: apache_access
+# Logs de nmap
+- type: log
+  enabled: true
+  paths:
+    - /logs/scan/*.log
+  fields:
+    type: nmap
+
+processors:
+  - if:
+      equals:
+        fields.type: "apache_access"
+    then:
+      - grok:
+          field: "message"
+          patterns:
+            - '%{COMBINEDAPACHELOG}'
+      - drop_fields:
+          fields: ["agent", "input", "log"]
+
+output.logstash:
+  hosts: ["logstash:5044"]

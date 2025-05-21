@@ -1,8 +1,9 @@
-[nginx-auth]
-enabled = true
-port = http
-filter = nginx-auth
-logpath = /var/log/nginx/access.log
+[apache-auth]
+enabled  = true
+port     = http,https
+filter   = apache-auth
+logpath  = /var/log/apache2/access.log
 maxretry = 3
 findtime = 600
-bantime = 3600
+bantime  = 3600
+
