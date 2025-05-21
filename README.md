@@ -11,4 +11,4 @@ utilizar el script start.sh para la inicialización de todo el proyecto.
 resetear todos los contenedores
 docker stop $(docker ps -aq)
 docker rm $(docker ps -aq)
-docker prune -a --force
+docker image prune -a --force
