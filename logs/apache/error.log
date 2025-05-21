@@ -103,3 +103,225 @@
 [Wed May 21 15:13:36.574946 2025] [core:warn] [pid 8:tid 131550971021184] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
 [Wed May 21 15:13:36.592415 2025] [mpm_event:notice] [pid 8:tid 131550971021184] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
 [Wed May 21 15:13:36.592473 2025] [core:notice] [pid 8:tid 131550971021184] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:16:36.979854 2025] [security2:notice] [pid 7:tid 136197957941120] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:16:36.989802 2025] [security2:notice] [pid 7:tid 136197957941120] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:16:36.990214 2025] [security2:notice] [pid 7:tid 136197957941120] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:16:36.990474 2025] [security2:notice] [pid 7:tid 136197957941120] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:16:36.990730 2025] [security2:notice] [pid 7:tid 136197957941120] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:16:36.990957 2025] [security2:notice] [pid 7:tid 136197957941120] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:16:36.991145 2025] [security2:notice] [pid 7:tid 136197957941120] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:16:37.394365 2025] [mpm_event:notice] [pid 7:tid 136197957941120] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:16:37.394497 2025] [core:notice] [pid 7:tid 136197957941120] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:19:44.083265 2025] [security2:notice] [pid 8:tid 138239483438976] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:19:44.084773 2025] [security2:notice] [pid 8:tid 138239483438976] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:19:44.084801 2025] [security2:notice] [pid 8:tid 138239483438976] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:19:44.084819 2025] [security2:notice] [pid 8:tid 138239483438976] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:19:44.084837 2025] [security2:notice] [pid 8:tid 138239483438976] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:19:44.084865 2025] [security2:notice] [pid 8:tid 138239483438976] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:19:44.084883 2025] [security2:notice] [pid 8:tid 138239483438976] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:19:44.337810 2025] [mpm_event:notice] [pid 8:tid 138239483438976] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:19:44.337882 2025] [core:notice] [pid 8:tid 138239483438976] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:21:01.873196 2025] [security2:notice] [pid 9:tid 132295745664896] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:21:01.874846 2025] [security2:notice] [pid 9:tid 132295745664896] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:21:01.874870 2025] [security2:notice] [pid 9:tid 132295745664896] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:21:01.874888 2025] [security2:notice] [pid 9:tid 132295745664896] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:21:01.874906 2025] [security2:notice] [pid 9:tid 132295745664896] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:21:01.874923 2025] [security2:notice] [pid 9:tid 132295745664896] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:21:01.874941 2025] [security2:notice] [pid 9:tid 132295745664896] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:21:02.526026 2025] [core:warn] [pid 9:tid 132295745664896] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 21 15:21:02.538419 2025] [mpm_event:notice] [pid 9:tid 132295745664896] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:21:02.543664 2025] [core:notice] [pid 9:tid 132295745664896] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:28:46.097813 2025] [security2:notice] [pid 8:tid 132407629518720] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:28:46.098410 2025] [security2:notice] [pid 8:tid 132407629518720] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:28:46.099636 2025] [security2:notice] [pid 8:tid 132407629518720] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:28:46.100010 2025] [security2:notice] [pid 8:tid 132407629518720] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:28:46.100241 2025] [security2:notice] [pid 8:tid 132407629518720] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:28:46.101434 2025] [security2:notice] [pid 8:tid 132407629518720] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:28:46.101711 2025] [security2:notice] [pid 8:tid 132407629518720] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:28:46.483046 2025] [mpm_event:notice] [pid 8:tid 132407629518720] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:28:46.488844 2025] [core:notice] [pid 8:tid 132407629518720] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:32:43.277270 2025] [security2:notice] [pid 8:tid 130813708789632] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:32:43.280048 2025] [security2:notice] [pid 8:tid 130813708789632] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:32:43.280299 2025] [security2:notice] [pid 8:tid 130813708789632] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:32:43.280549 2025] [security2:notice] [pid 8:tid 130813708789632] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:32:43.280907 2025] [security2:notice] [pid 8:tid 130813708789632] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:32:43.281129 2025] [security2:notice] [pid 8:tid 130813708789632] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:32:43.281841 2025] [security2:notice] [pid 8:tid 130813708789632] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:32:43.552182 2025] [core:warn] [pid 8:tid 130813708789632] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 21 15:32:43.558251 2025] [mpm_event:notice] [pid 8:tid 130813708789632] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:32:43.559018 2025] [core:notice] [pid 8:tid 130813708789632] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:35:46.700426 2025] [security2:notice] [pid 7:tid 138225583409024] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:35:46.702289 2025] [security2:notice] [pid 7:tid 138225583409024] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:35:46.702319 2025] [security2:notice] [pid 7:tid 138225583409024] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:35:46.702337 2025] [security2:notice] [pid 7:tid 138225583409024] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:35:46.702355 2025] [security2:notice] [pid 7:tid 138225583409024] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:35:46.702373 2025] [security2:notice] [pid 7:tid 138225583409024] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:35:46.702390 2025] [security2:notice] [pid 7:tid 138225583409024] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:35:46.946819 2025] [mpm_event:notice] [pid 7:tid 138225583409024] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:35:46.946883 2025] [core:notice] [pid 7:tid 138225583409024] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:45:50.291980 2025] [security2:notice] [pid 9:tid 138880808146816] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:45:50.292951 2025] [security2:notice] [pid 9:tid 138880808146816] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:45:50.292977 2025] [security2:notice] [pid 9:tid 138880808146816] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:45:50.292995 2025] [security2:notice] [pid 9:tid 138880808146816] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:45:50.293013 2025] [security2:notice] [pid 9:tid 138880808146816] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:45:50.293031 2025] [security2:notice] [pid 9:tid 138880808146816] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:45:50.293049 2025] [security2:notice] [pid 9:tid 138880808146816] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:45:50.684221 2025] [mpm_event:notice] [pid 9:tid 138880808146816] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:45:50.695223 2025] [core:notice] [pid 9:tid 138880808146816] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:48:08.831035 2025] [security2:notice] [pid 8:tid 131804746069888] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:48:08.831795 2025] [security2:notice] [pid 8:tid 131804746069888] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:48:08.831820 2025] [security2:notice] [pid 8:tid 131804746069888] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:48:08.831839 2025] [security2:notice] [pid 8:tid 131804746069888] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:48:08.832475 2025] [security2:notice] [pid 8:tid 131804746069888] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:48:08.832493 2025] [security2:notice] [pid 8:tid 131804746069888] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:48:08.832511 2025] [security2:notice] [pid 8:tid 131804746069888] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:48:09.171642 2025] [mpm_event:notice] [pid 8:tid 131804746069888] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:48:09.176605 2025] [core:notice] [pid 8:tid 131804746069888] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 15:57:14.998651 2025] [security2:notice] [pid 8:tid 134374144075648] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 15:57:15.001840 2025] [security2:notice] [pid 8:tid 134374144075648] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 15:57:15.001867 2025] [security2:notice] [pid 8:tid 134374144075648] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 15:57:15.001885 2025] [security2:notice] [pid 8:tid 134374144075648] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 15:57:15.001903 2025] [security2:notice] [pid 8:tid 134374144075648] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 15:57:15.001988 2025] [security2:notice] [pid 8:tid 134374144075648] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 15:57:15.002024 2025] [security2:notice] [pid 8:tid 134374144075648] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 15:57:15.254115 2025] [mpm_event:notice] [pid 8:tid 134374144075648] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 15:57:15.254179 2025] [core:notice] [pid 8:tid 134374144075648] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 16:00:02.996473 2025] [security2:notice] [pid 9:tid 138018112358272] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 16:00:03.000849 2025] [security2:notice] [pid 9:tid 138018112358272] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 16:00:03.000876 2025] [security2:notice] [pid 9:tid 138018112358272] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 16:00:03.000894 2025] [security2:notice] [pid 9:tid 138018112358272] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 16:00:03.000912 2025] [security2:notice] [pid 9:tid 138018112358272] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 16:00:03.000929 2025] [security2:notice] [pid 9:tid 138018112358272] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 16:00:03.000947 2025] [security2:notice] [pid 9:tid 138018112358272] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 16:00:03.337468 2025] [core:warn] [pid 9:tid 138018112358272] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 21 16:00:03.350052 2025] [mpm_event:notice] [pid 9:tid 138018112358272] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 16:00:03.350107 2025] [core:notice] [pid 9:tid 138018112358272] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 16:06:43.771452 2025] [security2:notice] [pid 8:tid 129573689550720] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 16:06:43.773628 2025] [security2:notice] [pid 8:tid 129573689550720] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 16:06:43.773947 2025] [security2:notice] [pid 8:tid 129573689550720] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 16:06:43.774115 2025] [security2:notice] [pid 8:tid 129573689550720] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 16:06:43.774156 2025] [security2:notice] [pid 8:tid 129573689550720] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 16:06:43.774186 2025] [security2:notice] [pid 8:tid 129573689550720] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 16:06:43.774203 2025] [security2:notice] [pid 8:tid 129573689550720] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 16:06:44.038015 2025] [core:warn] [pid 8:tid 129573689550720] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 21 16:06:44.049913 2025] [mpm_event:notice] [pid 8:tid 129573689550720] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 16:06:44.050758 2025] [core:notice] [pid 8:tid 129573689550720] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 16:21:15.695977 2025] [security2:notice] [pid 7:tid 123457049323392] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 16:21:15.698790 2025] [security2:notice] [pid 7:tid 123457049323392] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 16:21:15.698815 2025] [security2:notice] [pid 7:tid 123457049323392] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 16:21:15.698834 2025] [security2:notice] [pid 7:tid 123457049323392] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 16:21:15.698852 2025] [security2:notice] [pid 7:tid 123457049323392] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 16:21:15.698869 2025] [security2:notice] [pid 7:tid 123457049323392] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 16:21:15.698887 2025] [security2:notice] [pid 7:tid 123457049323392] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 16:21:16.044097 2025] [mpm_event:notice] [pid 7:tid 123457049323392] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 16:21:16.044183 2025] [core:notice] [pid 7:tid 123457049323392] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 16:28:03.355158 2025] [security2:notice] [pid 8:tid 123755737610112] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 16:28:03.358441 2025] [security2:notice] [pid 8:tid 123755737610112] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 16:28:03.358724 2025] [security2:notice] [pid 8:tid 123755737610112] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 16:28:03.359101 2025] [security2:notice] [pid 8:tid 123755737610112] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 16:28:03.359370 2025] [security2:notice] [pid 8:tid 123755737610112] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 16:28:03.359546 2025] [security2:notice] [pid 8:tid 123755737610112] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 16:28:03.359814 2025] [security2:notice] [pid 8:tid 123755737610112] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 16:28:03.626135 2025] [mpm_event:notice] [pid 8:tid 123755737610112] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 16:28:03.626233 2025] [core:notice] [pid 8:tid 123755737610112] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 16:32:45.634823 2025] [security2:notice] [pid 8:tid 124895709882240] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 16:32:45.643302 2025] [security2:notice] [pid 8:tid 124895709882240] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 16:32:45.643735 2025] [security2:notice] [pid 8:tid 124895709882240] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 16:32:45.644053 2025] [security2:notice] [pid 8:tid 124895709882240] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 16:32:45.644272 2025] [security2:notice] [pid 8:tid 124895709882240] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 16:32:45.644506 2025] [security2:notice] [pid 8:tid 124895709882240] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 16:32:45.644791 2025] [security2:notice] [pid 8:tid 124895709882240] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 16:32:46.035834 2025] [mpm_event:notice] [pid 8:tid 124895709882240] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 16:32:46.037794 2025] [core:notice] [pid 8:tid 124895709882240] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 16:45:20.946944 2025] [security2:notice] [pid 8:tid 132129480513408] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 16:45:20.949380 2025] [security2:notice] [pid 8:tid 132129480513408] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 16:45:20.949610 2025] [security2:notice] [pid 8:tid 132129480513408] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 16:45:20.949895 2025] [security2:notice] [pid 8:tid 132129480513408] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 16:45:20.950164 2025] [security2:notice] [pid 8:tid 132129480513408] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 16:45:20.950359 2025] [security2:notice] [pid 8:tid 132129480513408] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 16:45:20.950578 2025] [security2:notice] [pid 8:tid 132129480513408] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 16:45:21.126062 2025] [mpm_event:notice] [pid 8:tid 132129480513408] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 16:45:21.126837 2025] [core:notice] [pid 8:tid 132129480513408] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 16:57:33.113406 2025] [security2:notice] [pid 8:tid 132313548593024] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 16:57:33.127097 2025] [security2:notice] [pid 8:tid 132313548593024] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 16:57:33.127127 2025] [security2:notice] [pid 8:tid 132313548593024] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 16:57:33.127145 2025] [security2:notice] [pid 8:tid 132313548593024] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 16:57:33.127163 2025] [security2:notice] [pid 8:tid 132313548593024] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 16:57:33.127181 2025] [security2:notice] [pid 8:tid 132313548593024] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 16:57:33.127199 2025] [security2:notice] [pid 8:tid 132313548593024] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 16:57:33.648407 2025] [core:warn] [pid 8:tid 132313548593024] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 21 16:57:33.679663 2025] [mpm_event:notice] [pid 8:tid 132313548593024] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 16:57:33.683137 2025] [core:notice] [pid 8:tid 132313548593024] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 17:05:51.662391 2025] [security2:notice] [pid 8:tid 127521202644864] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 17:05:51.663942 2025] [security2:notice] [pid 8:tid 127521202644864] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 17:05:51.663966 2025] [security2:notice] [pid 8:tid 127521202644864] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 17:05:51.663983 2025] [security2:notice] [pid 8:tid 127521202644864] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 17:05:51.664000 2025] [security2:notice] [pid 8:tid 127521202644864] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 17:05:51.664016 2025] [security2:notice] [pid 8:tid 127521202644864] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 17:05:51.664032 2025] [security2:notice] [pid 8:tid 127521202644864] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 17:05:51.902238 2025] [core:warn] [pid 8:tid 127521202644864] AH00098: pid file /var/run/apache2/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed May 21 17:05:51.927889 2025] [mpm_event:notice] [pid 8:tid 127521202644864] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 17:05:51.939778 2025] [core:notice] [pid 8:tid 127521202644864] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 17:07:26.040558 2025] [security2:notice] [pid 8:tid 128956916467584] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 17:07:26.045383 2025] [security2:notice] [pid 8:tid 128956916467584] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 17:07:26.045621 2025] [security2:notice] [pid 8:tid 128956916467584] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 17:07:26.046265 2025] [security2:notice] [pid 8:tid 128956916467584] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 17:07:26.046647 2025] [security2:notice] [pid 8:tid 128956916467584] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 17:07:26.046953 2025] [security2:notice] [pid 8:tid 128956916467584] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 17:07:26.047169 2025] [security2:notice] [pid 8:tid 128956916467584] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 17:07:26.495427 2025] [mpm_event:notice] [pid 8:tid 128956916467584] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 17:07:26.495532 2025] [core:notice] [pid 8:tid 128956916467584] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 17:17:29.961649 2025] [security2:notice] [pid 8:tid 138324447254400] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 17:17:29.965351 2025] [security2:notice] [pid 8:tid 138324447254400] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 17:17:29.968862 2025] [security2:notice] [pid 8:tid 138324447254400] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 17:17:29.968891 2025] [security2:notice] [pid 8:tid 138324447254400] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 17:17:29.968909 2025] [security2:notice] [pid 8:tid 138324447254400] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 17:17:29.968926 2025] [security2:notice] [pid 8:tid 138324447254400] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 17:17:29.968944 2025] [security2:notice] [pid 8:tid 138324447254400] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 17:17:38.610341 2025] [mpm_event:notice] [pid 8:tid 138324447254400] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 17:17:38.610428 2025] [core:notice] [pid 8:tid 138324447254400] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 17:25:31.647280 2025] [security2:notice] [pid 8:tid 134187883071360] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 17:25:31.653557 2025] [security2:notice] [pid 8:tid 134187883071360] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 17:25:31.653622 2025] [security2:notice] [pid 8:tid 134187883071360] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 17:25:31.653641 2025] [security2:notice] [pid 8:tid 134187883071360] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 17:25:31.653657 2025] [security2:notice] [pid 8:tid 134187883071360] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 17:25:31.653711 2025] [security2:notice] [pid 8:tid 134187883071360] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 17:25:31.653729 2025] [security2:notice] [pid 8:tid 134187883071360] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 17:25:31.990356 2025] [mpm_event:notice] [pid 8:tid 134187883071360] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 17:25:31.993118 2025] [core:notice] [pid 8:tid 134187883071360] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 17:31:48.485167 2025] [security2:notice] [pid 8:tid 138180959958912] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 17:31:48.489273 2025] [security2:notice] [pid 8:tid 138180959958912] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 17:31:48.489498 2025] [security2:notice] [pid 8:tid 138180959958912] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 17:31:48.489540 2025] [security2:notice] [pid 8:tid 138180959958912] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 17:31:48.489558 2025] [security2:notice] [pid 8:tid 138180959958912] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 17:31:48.489575 2025] [security2:notice] [pid 8:tid 138180959958912] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 17:31:48.489592 2025] [security2:notice] [pid 8:tid 138180959958912] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 17:31:48.957228 2025] [mpm_event:notice] [pid 8:tid 138180959958912] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 17:31:48.957549 2025] [core:notice] [pid 8:tid 138180959958912] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 18:23:08.175761 2025] [security2:notice] [pid 8:tid 124179007039360] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 18:23:08.177225 2025] [security2:notice] [pid 8:tid 124179007039360] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 18:23:08.177467 2025] [security2:notice] [pid 8:tid 124179007039360] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 18:23:08.177714 2025] [security2:notice] [pid 8:tid 124179007039360] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 18:23:08.177886 2025] [security2:notice] [pid 8:tid 124179007039360] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 18:23:08.178107 2025] [security2:notice] [pid 8:tid 124179007039360] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 18:23:08.178242 2025] [security2:notice] [pid 8:tid 124179007039360] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 18:23:08.468025 2025] [mpm_event:notice] [pid 8:tid 124179007039360] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 18:23:08.484143 2025] [core:notice] [pid 8:tid 124179007039360] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 18:31:55.605042 2025] [security2:notice] [pid 8:tid 125961733801856] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 18:31:55.607389 2025] [security2:notice] [pid 8:tid 125961733801856] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 18:31:55.607425 2025] [security2:notice] [pid 8:tid 125961733801856] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 18:31:55.607442 2025] [security2:notice] [pid 8:tid 125961733801856] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 18:31:55.607459 2025] [security2:notice] [pid 8:tid 125961733801856] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 18:31:55.607476 2025] [security2:notice] [pid 8:tid 125961733801856] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 18:31:55.607493 2025] [security2:notice] [pid 8:tid 125961733801856] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 18:31:56.039909 2025] [mpm_event:notice] [pid 8:tid 125961733801856] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 18:31:56.039992 2025] [core:notice] [pid 8:tid 125961733801856] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Wed May 21 18:35:30.113094 2025] [security2:notice] [pid 8:tid 132162991175552] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Wed May 21 18:35:30.115973 2025] [security2:notice] [pid 8:tid 132162991175552] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Wed May 21 18:35:30.116146 2025] [security2:notice] [pid 8:tid 132162991175552] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Wed May 21 18:35:30.116290 2025] [security2:notice] [pid 8:tid 132162991175552] ModSecurity: LUA compiled version="Lua 5.1"
+[Wed May 21 18:35:30.116446 2025] [security2:notice] [pid 8:tid 132162991175552] ModSecurity: YAJL compiled version="2.1.0"
+[Wed May 21 18:35:30.116614 2025] [security2:notice] [pid 8:tid 132162991175552] ModSecurity: LIBXML compiled version="2.9.14"
+[Wed May 21 18:35:30.116914 2025] [security2:notice] [pid 8:tid 132162991175552] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Wed May 21 18:35:30.384541 2025] [mpm_event:notice] [pid 8:tid 132162991175552] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Wed May 21 18:35:30.385867 2025] [core:notice] [pid 8:tid 132162991175552] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'

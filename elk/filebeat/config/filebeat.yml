@@ -23,16 +23,7 @@ filebeat.inputs:
     type: nmap
 
 processors:
-  - if:
-      equals:
-        fields.type: "apache_access"
-    then:
-      - grok:
-          field: "message"
-          patterns:
-            - '%{COMBINEDAPACHELOG}'
-      - drop_fields:
-          fields: ["agent", "input", "log"]
+- add_host_metadata: ~
 
 output.logstash:
   hosts: ["logstash:5044"]
