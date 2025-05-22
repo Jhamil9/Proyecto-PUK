@@ -148,6 +148,7 @@ En la estructura del proyecto podemos ver que está organizado para facilitar la
 #### ¿Que conseguimos al configurarlo de esta manera?
 
 Al configurar el entorno de esta manera, conseguimos un sistema eficiente y seguro, donde cada servicio opera de forma aislada en su propio contenedor, lo que minimiza riesgos y simplifica la gestión de dependencias. Además, se garantiza el poder desplegarse en cualquier máquina compatible con Docker.
+Montando los servicios de esta manera podríamos preparar y montar la imagen en cualquier servidor con el objetivo de monitorear la red de forma fácil y con una configuración básica.
 
 ## *Posibles Mejoras Futuras*. <a name="id4"></a>
 
@@ -184,6 +185,9 @@ Ejecutar periódicamente nuclei, bandit o kube-bench para detectar debilidades.
 Configurar checks de salud en Docker Compose para reiniciar servicios fallidos automáticamente.
 
 ## *Conclusiones*. <a name="id5"></a>
+
+
+En cuanto a Apache se refiere, el proceso de construir esta imagen de manera manual ha resultado excesivamente engorroso: la constante lucha con dependencias incompatibles, directorios preexistentes que obstaculizan el despliegue y la persistencia de errores de caché convierten cada compilación en una tarea laboriosa; la escasa documentación y la necesidad de purgar manualmente rutas internas de ModSecurity antes de cada clonación transforman lo que debería ser una simple configuración en un procedimiento farragoso que consume un tiempo desproporcionado y genera una notable frustración.
 
 ## *Anexos*. <a name="id6"></a>
 
