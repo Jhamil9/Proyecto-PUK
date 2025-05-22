@@ -361,11 +361,11 @@ Dashboard de alertas
 3. Prevenir riesgos de seguridad implementando capas de protección como SSL/TLS para la comunicación encriptada, GPG para la autenticación y firma digital de logs, y buenas prácticas de hardening en todos los servicios involucrado.
 
 ## *Conclusiones*. <a name="id5"></a>
-En cuanto a Apache se refiere, el proceso de construir esta imagen de manera manual ha resultado excesivamente engorroso: la constante lucha con dependencias incompatibles, directorios preexistentes que obstaculizan el despliegue y la persistencia de errores de caché convierten cada compilación en una tarea laboriosa; la escasa documentación y la necesidad de purgar manualmente rutas internas de ModSecurity antes de cada clonación transforman lo que debería ser una simple configuración en un procedimiento farragoso que consume un tiempo desproporcionado y genera una notable frustración.
+Al montar Apache  en docker fue tedioso, el proceso de construir esta imagen de manera manual ha resultado excesivamente engorroso: la constante lucha con dependencias incompatibles, directorios preexistentes que obstaculizan el despliegue y la persistencia de errores de caché convierten cada compilación en una tarea laboriosa; la escasa documentación y la necesidad de purgar manualmente rutas internas de ModSecurity antes de cada clonación transforman lo que debería ser una simple configuración en un procedimiento farragoso que consume un tiempo desproporcionado y genera una notable frustración.
 
-Con el fail2ban, ...
+Con Fail2ban no hubo mucha complicacion ya que se monto sobre de forma manual y se conocia el funcionamiento ya que lo hemos usado anteriormente en clase, el mayor desafio podria decirse que fue configurar el Dockerfile para que la jaula se implementara al montar y levantar la imagen.
 
-Con el ids creado por python ,...
+Con el ids Se tuvo bastantes complicaciones, al ser imagenes independientes y tener un conocimiento basico-medio de docker nos costó implementar un servicio como suricata o Zeek, suricata por la fata de informacion tuvimos bastantes problemas y con Zeek conseguimos ponerlo en marcha pero se tenia problemas con la lectura de logs, finalmente se opto por montar un servicio IDS basico pero funcional a traves de Python.
 
 Finalmente, trabajando con ELK nos dimos cuenta de que, al principio, puede ser un poco desordenado manejar los logs porque no siempre están bien estructurados o comprimidos, lo que genera cierta confusión. Pero una vez que le encontramos el ritmo y organizamos bien la entrada y salida de datos, ELK se convierte en una herramienta muy útil para ver, gestionar y entender lo que pasa en nuestros sistemas.
 
