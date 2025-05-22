@@ -140,7 +140,7 @@ Al configurar el entorno de esta manera, conseguimos un sistema eficiente y segu
 
 ## *Posibles Mejoras Futuras*. <a name="id4"></a>
 
-### Apache
+### 🪶Apache
 Se podria implementar certificado SSL/TLS, Configurar reglas en Apache para forzar conexiones seguras con el protocolo HTTPS y deshabilitar protocolos y algoritmos obsoletos como TLS 1.0.
 
 Tambien se podria usar la integración con LDAP/Active Directory para acceso restringido y Automatizar la actualización de .htpasswd mediante scripts o herramientas externas.
