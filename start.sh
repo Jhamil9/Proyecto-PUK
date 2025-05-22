@@ -29,6 +29,10 @@ build_image "proyecto-puk-webserver" "./apache"
 build_image "proyecto-puk-fail2ban" "./fail2ban"
 build_image "proyecto-puk-port-scan-detector" "./nmap-detector"
 
+# === Estableciendo Permisos ===
+
+chmod go-w ./elk/filebeat/config/filebeat.yml
+
 # === INICIALIZACIÓN DE LOS CONTENEDORES ===
 
 echo -e "${YELLOW}▶ Iniciando contenedores con Docker Compose...${NC}"
