@@ -1,7 +1,10 @@
-<center>
+
 <p align="center">
   <img src="/img/0_cds1ms5yT50JN--W.png" alt="Diagrama" width="400" />
 </p>
+
+<center>
+
 # Implementación Segura de Docker en Ciberseguridad.
 ```
 +---------------------+
@@ -37,6 +40,8 @@
 |  Kibana, Filebeat)  |
 +---------------------+
 ```
+
+
 #### *Curso:* Ciberseguridad en Entornos de las Tecnologías de la Información.
 </center>
 
