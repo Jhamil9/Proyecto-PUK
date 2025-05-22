@@ -45,7 +45,7 @@
 
 ---
 
-### ÍNDICE
+## ÍNDICE
 
 + [Introducción](#id1)
 + [Justificación](#id2)
@@ -57,10 +57,10 @@
 
 + [Bibliografía](#id7)
 
-### *Introducción*. <a name="id1"></a>
+## *Introducción*. <a name="id1"></a>
 Docker es una tecnología contenedor de aplicaciones construida sobre LXC que permite crear "contenedores", estas son aplicaciones empaquetadas auto-suficientes, muy livianas, capaces de funcionar en prácticamente cualquier ambiente, ya que tiene su propio sistema de archivos, librerías, terminal, etc.
 
-### *Justificación*. <a name="id2"></a>
+## *Justificación*. <a name="id2"></a>
 
 El objetivo es diseñar y desplegar un entorno seguro y monitorizable que permita simular, detectar y mitigar amenazas de seguridad en sistemas informáticos. Para lograrlo se pretende proteger los servicios desplegados y proporcionar visibilidad sobre posibles incidentes de seguridad, facilitando la detección temprana y la respuesta ante ataques. De este modo, se contribuye a mejorar la postura de seguridad y la capacidad de reacción frente a potenciales riesgos en la infraestructura tecnológica analizada.
 
