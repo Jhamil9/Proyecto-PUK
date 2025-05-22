@@ -71,13 +71,13 @@ Esta solución se ha elegido porque integra varias tecnologías y herramientas d
 - **Apache**: Simula un servicio real expuesto a Internet.
 ```bash
 ├───apache
-│   │   Dockerfile
-│   ├───conf
-│   │       000-default.conf
-│   ├───htpasswd
-│   │       .htpasswd
-│   └───www
-│           index.html
+    │   └── Dockerfile
+    ├───conf
+    │     └── 000-default.conf
+    ├───htpasswd
+    │    └── .htpasswd
+    └───www
+         └── index.html
 ```
 
 
