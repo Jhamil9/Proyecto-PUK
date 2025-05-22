@@ -68,9 +68,20 @@ En este caso, se trabaja con Docker y se implementan los servicios de Apache, EL
 
 Esta solución se ha elegido porque integra varias tecnologías y herramientas de referencia en la industria de la ciberseguridad, cada una cumpliendo un rol específico:
 
-- Apache: Simula un servicio real expuesto a Internet.
+- **Apache**: Simula un servicio real expuesto a Internet.
+```bash
+├───apache
+│   │   Dockerfile
+│   ├───conf
+│   │       000-default.conf
+│   ├───htpasswd
+│   │       .htpasswd
+│   └───www
+│           index.html
+```
 
-- Fail2Ban: Automatiza la detección y mitigación de ataques basados en patrones de logs y bloqueando IPs que realizan intentos como el acceso no autorizado alla web.
+
+- **Fail2Ban**: Automatiza la detección y mitigación de ataques basados en patrones de logs y bloqueando IPs que realizan intentos como el acceso no autorizado alla web.
 
 - NIDS personalizado: Es un sistema de detección de intrusiones en red desarrollado principalmente para identificar patrones de escaneo de puertos, como los que suelen generar herramientas de reconocimiento tipo Nmap.
 
