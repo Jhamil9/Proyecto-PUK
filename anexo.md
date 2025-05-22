@@ -107,6 +107,40 @@ networks:
   proyecto_monitoring_net:
     driver: bridge
 ```
+#### filebeat.yml
+```
+filebeat.inputs:
+  # LOGS de Fail2ban
+- type: log
+  enabled: true
+  paths:
+    - /logs/fail2ban/fail2ban.log
+  fields:
+    type: fail2ban
+
+# Logs de apache
+- type: log
+  enabled: true
+  paths:
+    - /logs/apache/access.log
+  fields:
+    type: apache_access
+# Logs de nmap
+- type: log
+  enabled: true
+  paths:
+    - /logs/scan/*.log
+  fields:
+    type: nmap
+
+processors:
+- add_host_metadata: ~
+
+output.logstash:
+  hosts: ["logstash:5044"]
+```
+
+
 # Servicios Dockerfile
 
 ## <a id="va1" href="https://github.com/Jhamil9/Proyecto-PUK/tree/e09914822d33f31c20c951bd1c2ee2b79de4f1ad/Docker/apache">Apache</a>
@@ -204,36 +238,4 @@ ENTRYPOINT ["python", "ids_script.py"]
 FROM docker.elastic.co/logstash/logstash:7.17.28
 
 COPY eventos.conf /usr/share/logstash/pipeline/logstash.conf
-```
-## filebeat.yml
-```
-filebeat.inputs:
-  # LOGS de Fail2ban
-- type: log
-  enabled: true
-  paths:
-    - /logs/fail2ban/fail2ban.log
-  fields:
-    type: fail2ban
-
-# Logs de apache
-- type: log
-  enabled: true
-  paths:
-    - /logs/apache/access.log
-  fields:
-    type: apache_access
-# Logs de nmap
-- type: log
-  enabled: true
-  paths:
-    - /logs/scan/*.log
-  fields:
-    type: nmap
-
-processors:
-- add_host_metadata: ~
-
-output.logstash:
-  hosts: ["logstash:5044"]
 ```
