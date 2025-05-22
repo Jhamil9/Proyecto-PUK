@@ -1,0 +1,20 @@
+[Thu May 22 17:29:45.311859 2025] [security2:notice] [pid 9:tid 139872715970432] ModSecurity for Apache/2.9.7 (http://www.modsecurity.org/) configured.
+[Thu May 22 17:29:45.311936 2025] [security2:notice] [pid 9:tid 139872715970432] ModSecurity: APR compiled version="1.7.2"; loaded version="1.7.2"
+[Thu May 22 17:29:45.311941 2025] [security2:notice] [pid 9:tid 139872715970432] ModSecurity: PCRE2 compiled version="10.42 "; loaded version="10.42 2022-12-11"
+[Thu May 22 17:29:45.311944 2025] [security2:notice] [pid 9:tid 139872715970432] ModSecurity: LUA compiled version="Lua 5.1"
+[Thu May 22 17:29:45.311946 2025] [security2:notice] [pid 9:tid 139872715970432] ModSecurity: YAJL compiled version="2.1.0"
+[Thu May 22 17:29:45.311948 2025] [security2:notice] [pid 9:tid 139872715970432] ModSecurity: LIBXML compiled version="2.9.14"
+[Thu May 22 17:29:45.311950 2025] [security2:notice] [pid 9:tid 139872715970432] ModSecurity: Status engine is currently disabled, enable it by set SecStatusEngine to On.
+[Thu May 22 17:29:45.441608 2025] [mpm_event:notice] [pid 9:tid 139872715970432] AH00489: Apache/2.4.58 (Ubuntu) configured -- resuming normal operations
+[Thu May 22 17:29:45.441629 2025] [core:notice] [pid 9:tid 139872715970432] AH00094: Command line: '/usr/sbin/apache2 -D FOREGROUND'
+[Thu May 22 17:42:04.640398 2025] [auth_basic:error] [pid 11:tid 139872671184576] [client 172.18.0.1:58368] AH01618: user asdasf not found: /
+[Thu May 22 17:42:06.879267 2025] [auth_basic:error] [pid 11:tid 139872574727872] [client 172.18.0.1:58368] AH01618: user  not found: /
+[Thu May 22 17:42:09.566429 2025] [auth_basic:error] [pid 11:tid 139872566335168] [client 172.18.0.1:58368] AH01618: user asda not found: /
+[Thu May 22 17:42:13.205129 2025] [auth_basic:error] [pid 11:tid 139872557942464] [client 172.18.0.1:58368] AH01618: user aaaa not found: /
+[Thu May 22 17:42:15.101838 2025] [auth_basic:error] [pid 11:tid 139872549549760] [client 172.18.0.1:58368] AH01618: user aaa not found: /
+[Thu May 22 17:42:15.249614 2025] [auth_basic:error] [pid 11:tid 139872541157056] [client 172.18.0.1:58368] AH01618: user  not found: /
+[Thu May 22 17:42:15.400573 2025] [auth_basic:error] [pid 11:tid 139872532764352] [client 172.18.0.1:58368] AH01618: user  not found: /
+[Thu May 22 17:42:43.246737 2025] [auth_basic:error] [pid 11:tid 139872421525184] [client 172.18.0.1:60456] AH01618: user a not found: /
+[Thu May 22 17:42:43.423684 2025] [auth_basic:error] [pid 11:tid 139872413132480] [client 172.18.0.1:60456] AH01618: user a not found: /
+[Thu May 22 17:42:43.586762 2025] [auth_basic:error] [pid 11:tid 139872404739776] [client 172.18.0.1:60456] AH01618: user  not found: /
+[Thu May 22 17:42:43.733607 2025] [auth_basic:error] [pid 11:tid 139872396347072] [client 172.18.0.1:60456] AH01618: user  not found: /

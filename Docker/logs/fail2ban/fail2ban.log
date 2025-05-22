@@ -1,0 +1,42 @@
+2025-05-22 17:29:45,332 fail2ban.server         [1]: INFO    --------------------------------------------------
+2025-05-22 17:29:45,333 fail2ban.server         [1]: INFO    Starting Fail2ban v0.11.2
+2025-05-22 17:29:45,334 fail2ban.observer       [1]: INFO    Observer start...
+2025-05-22 17:29:45,342 fail2ban.database       [1]: INFO    Connected to fail2ban persistent database '/var/lib/fail2ban/fail2ban.sqlite3'
+2025-05-22 17:29:45,343 fail2ban.database       [1]: WARNING New database created. Version '4'
+2025-05-22 17:29:45,343 fail2ban.transmitter    [1]: ERROR   Jail 'sshd' skipped, because of wrong configuration: Unable to read the filter 'sshd'
+2025-05-22 17:29:45,343 fail2ban.jail           [1]: INFO    Creating new jail 'apache-auth'
+2025-05-22 17:29:45,362 fail2ban.jail           [1]: INFO    Jail 'apache-auth' uses pyinotify {}
+2025-05-22 17:29:45,365 fail2ban.jail           [1]: INFO    Initiated 'pyinotify' backend
+2025-05-22 17:29:45,371 fail2ban.filter         [1]: INFO      maxRetry: 3
+2025-05-22 17:29:45,373 fail2ban.filter         [1]: INFO      findtime: 600
+2025-05-22 17:29:45,373 fail2ban.actions        [1]: INFO      banTime: 3600
+2025-05-22 17:29:45,373 fail2ban.filter         [1]: INFO      encoding: UTF-8
+2025-05-22 17:29:45,375 fail2ban.filter         [1]: INFO    Added logfile: '/var/log/apache2/access.log' (pos = 0, hash = da39a3ee5e6b4b0d3255bfef95601890afd80709)
+2025-05-22 17:29:45,389 fail2ban.jail           [1]: INFO    Jail 'apache-auth' started
+2025-05-22 17:42:00,780 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:00
+2025-05-22 17:42:04,708 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:04
+2025-05-22 17:42:07,414 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:06
+2025-05-22 17:42:07,579 fail2ban.actions        [1]: NOTICE  [apache-auth] Ban 172.18.0.1
+2025-05-22 17:42:07,602 fail2ban.utils          [1]: ERROR   7f3a3710cd30 -- exec: iptables -w -N f2b-apache-auth
+iptables -w -A f2b-apache-auth -j RETURN
+iptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth
+2025-05-22 17:42:07,602 fail2ban.utils          [1]: ERROR   7f3a3710cd30 -- stderr: '/bin/sh: 1: iptables: not found'
+2025-05-22 17:42:07,602 fail2ban.utils          [1]: ERROR   7f3a3710cd30 -- stderr: '/bin/sh: 2: iptables: not found'
+2025-05-22 17:42:07,602 fail2ban.utils          [1]: ERROR   7f3a3710cd30 -- stderr: '/bin/sh: 3: iptables: not found'
+2025-05-22 17:42:07,602 fail2ban.utils          [1]: ERROR   7f3a3710cd30 -- returned 127
+2025-05-22 17:42:07,602 fail2ban.utils          [1]: INFO    HINT on 127: "Command not found".  Make sure that all commands in 'iptables -w -N f2b-apache-auth\niptables -w -A f2b-apache-auth -j RETURN\niptables -w -I INPUT -p tcp -m multiport --dports http,https -j f2b-apache-auth' are in the PATH of fail2ban-server process (grep -a PATH= /proc/`pidof -x fail2ban-server`/environ). You may want to start "fail2ban-server -f" separately, initiate it with "fail2ban-client reload" in another shell session and observe if additional informative error messages appear in the terminals.
+2025-05-22 17:42:07,603 fail2ban.actions        [1]: ERROR   Failed to execute ban jail 'apache-auth' action 'iptables-multiport' info 'ActionInfo({'ip': '172.18.0.1', 'family': 'inet4', 'fid': <function Actions.ActionInfo.<lambda> at 0x7f3a37a78430>, 'raw-ticket': <function Actions.ActionInfo.<lambda> at 0x7f3a37a78af0>})': Error starting action Jail('apache-auth')/iptables-multiport: 'Script error'
+2025-05-22 17:42:10,120 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:09
+2025-05-22 17:42:13,206 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:13
+2025-05-22 17:42:15,103 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:15
+2025-05-22 17:42:15,250 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:15
+2025-05-22 17:42:15,401 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:15
+2025-05-22 17:42:15,428 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:15
+2025-05-22 17:42:15,615 fail2ban.actions        [1]: NOTICE  [apache-auth] 172.18.0.1 already banned
+2025-05-22 17:42:15,615 fail2ban.actions        [1]: NOTICE  [apache-auth] 172.18.0.1 already banned
+2025-05-22 17:42:41,216 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:41
+2025-05-22 17:42:43,247 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:43
+2025-05-22 17:42:43,424 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:43
+2025-05-22 17:42:43,588 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:43
+2025-05-22 17:42:43,663 fail2ban.actions        [1]: NOTICE  [apache-auth] 172.18.0.1 already banned
+2025-05-22 17:42:43,734 fail2ban.filter         [1]: INFO    [apache-auth] Found 172.18.0.1 - 2025-05-22 17:42:43

@@ -31,7 +31,7 @@
            v
 +---------------------+
 |      ELK Stack      |
-| (Elasticsearch,      |
+| (Elasticsearch,     |
 |  Kibana, Filebeat)  |
 +---------------------+
 ```
