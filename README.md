@@ -76,7 +76,7 @@ Esta solución se ha elegido porque integra varias tecnologías y herramientas d
 
 - ELK Stack: Proporciona una plataforma centralizada para la recolección, almacenamiento, análisis y visualización de logs, permitiendo detectar patrones anómalos y responder a incidentes de manera informada.
 
-#### *Implementación*. <a name="id3"></a>
+## *Implementación*. <a name="id3"></a>
 
 La principal herramienta que usamos es docker. Los servicios que se corren, depende de un sistema linux. Con la orquestacion de contenedores, `en este caso docker-compose.yml`, se logra configurar todos los servicios para que trabajen al unisono, permitiendo crear redes virtuales, volumenes persistentes como el caso de logs y algunas configuraciones comunes para que los contenedores puedan interactuar de manera segura y eficiente.
 
@@ -138,43 +138,43 @@ En la estructura del proyecto podemos ver que está organizado para facilitar la
 
 Al configurar el entorno de esta manera, conseguimos un sistema eficiente y seguro, donde cada servicio opera de forma aislada en su propio contenedor, lo que minimiza riesgos y simplifica la gestión de dependencias. Además, se garantiza el poder desplegarse en cualquier máquina compatible con Docker.
 
-### *Posibles Mejoras Futuras*. <a name="id4"></a>
+## *Posibles Mejoras Futuras*. <a name="id4"></a>
 
-#### Apache
+### Apache
 Se podria implementar certificado SSL/TLS, Configurar reglas en Apache para forzar conexiones seguras con el protocolo HTTPS y deshabilitar protocolos y algoritmos obsoletos como TLS 1.0.
 
 Tambien se podria usar la integración con LDAP/Active Directory para acceso restringido y Automatizar la actualización de .htpasswd mediante scripts o herramientas externas.
 
 Cambiar puertos y desactivar servicios inecesarios
 
-#### Fail2Ban
+### Fail2Ban
 Usar fail2ban-server con persistencia en SQLite o PostgreSQL para mantener los bloqueos tras reinicios.
 Tamien se pueden Integrar con listas negras de IPs maliciosas.
 Crear filtros adicionales para detectar patrones únicos.
 
-#### IDS
+### IDS
 Detectar patrones de escaneo basados en distribución de puertos.
 Ampliar análisis a otros tipos de paquetes para identificar escaneos pasivos.
 Integrar con Fail2Ban o iptables para bloquear IPs automáticamente.
 Registrar alertas en JSON para facilitar el procesamiento en ELK.
 
-#### ELK stack
+### ELK stack
 Definir un volumen (esdata) para preservar datos tras reinicios.
 Habilitar seguridad en Elasticsearch/Kibana con usuarios y permisos para limitar accesos.
 Cifrar comunicaciones entre Filebeat, Logstash y Elasticsearch.
 Se podria implementar acciones de envío de alertas por email en jail.local
 Añadir monitoreo de métricas del sistema como la CPU, memoria, red...
 
-#### Mejoras generales Docker
+## Mejoras generales Docker
 Separar servicios en redes Docker distintas.
 Configurar iptables o ufw en el host para restringir accesos no autorizados.
 Usar herramientas como Watchtower para actualizar contenedores automáticamente.
 Ejecutar periódicamente nuclei, bandit o kube-bench para detectar debilidades.
 Configurar checks de salud en Docker Compose para reiniciar servicios fallidos automáticamente.
 
-### *Conclusiones*. <a name="id5"></a>
+## *Conclusiones*. <a name="id5"></a>
 
-### *Anexos*. <a name="id6"></a>
+## *Anexos*. <a name="id6"></a>
 
-### *Bibliografía*. <a name="id7"></a>
+## *Bibliografía*. <a name="id7"></a>
 
