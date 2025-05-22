@@ -205,3 +205,35 @@ FROM docker.elastic.co/logstash/logstash:7.17.28
 
 COPY eventos.conf /usr/share/logstash/pipeline/logstash.conf
 ```
+## filebeat.yml
+```
+filebeat.inputs:
+  # LOGS de Fail2ban
+- type: log
+  enabled: true
+  paths:
+    - /logs/fail2ban/fail2ban.log
+  fields:
+    type: fail2ban
+
+# Logs de apache
+- type: log
+  enabled: true
+  paths:
+    - /logs/apache/access.log
+  fields:
+    type: apache_access
+# Logs de nmap
+- type: log
+  enabled: true
+  paths:
+    - /logs/scan/*.log
+  fields:
+    type: nmap
+
+processors:
+- add_host_metadata: ~
+
+output.logstash:
+  hosts: ["logstash:5044"]
+```
