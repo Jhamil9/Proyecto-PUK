@@ -1,5 +1,7 @@
 <center>
-
+<p align="center">
+  <img src="/img/0_cds1ms5yT50JN--W.png" alt="Diagrama" width="400" />
+</p>
 # Implementación Segura de Docker en Ciberseguridad.
 ```
 +---------------------+
