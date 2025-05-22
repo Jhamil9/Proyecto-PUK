@@ -323,6 +323,11 @@ Podemos ver como nuestro servicio de escaneo responde contra los nmaps.
 
 ### 2.Acceso al Servidor Web
 Servidor web funcionando.
+
+<p align="center">
+  <img src="/img/login.png" alt="Diagrama" />
+</p>
+
 ![image](https://github.com/user-attachments/assets/1036d17f-0078-4aea-a0ee-5000e9fce186)
 
 ### 3. ELK
