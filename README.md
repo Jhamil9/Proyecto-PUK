@@ -192,4 +192,4 @@ En cuanto a Apache se refiere, el proceso de construir esta imagen de manera man
 ## *Anexos*. <a name="id6"></a>
 
 ## *Bibliografía*. <a name="id7"></a>
-
+https://github.com/coreruleset/modsecurity-crs-docker
