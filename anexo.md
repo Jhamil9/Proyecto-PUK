@@ -1,8 +1,7 @@
 # Docker-compose
 
-```
+```bash
 services:
-# Adaptar al apache 
   webserver:
     build: ./apache
     container_name: apache-secure
@@ -17,8 +16,7 @@ services:
       - 8.8.8.8
 ```
 
-```
-# Fail2ban Servicio 
+```bash
   fail2ban:
     build: ./fail2ban
     container_name: fail2ban
@@ -35,8 +33,7 @@ services:
     privileged: true
 ```
 
-```
-# Port Scanner
+```bash
   port-scan-detector:
     build:
       context: ./nmap-detector
@@ -53,9 +50,7 @@ services:
       - THRESHOLD=15
       - TIME_WINDOW=60
 ```
-```
-# Elk
-
+```bash
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.28
     container_name: elastic
@@ -82,7 +77,7 @@ services:
     networks:
       - proyecto_monitoring_net
 ```
-```
+```bash
   kibana:
     image: docker.elastic.co/kibana/kibana:7.17.28
     container_name: kibana
@@ -94,7 +89,7 @@ services:
     networks:
       - proyecto_monitoring_net
 ```
-```
+```bash
   filebeat:
     image: docker.elastic.co/beats/filebeat:8.10.3
     container_name: filebeat
@@ -107,7 +102,7 @@ services:
       - proyecto_monitoring_net
 
 ```
-```
+```bash
 networks:
   proyecto_monitoring_net:
     driver: bridge
@@ -116,7 +111,7 @@ networks:
 
 ## <a id="va1" href="https://github.com/Jhamil9/Proyecto-PUK/tree/e09914822d33f31c20c951bd1c2ee2b79de4f1ad/Docker/apache">Apache</a>
 
-```
+```bash
 FROM ubuntu:24.04
 
 # Usuraio y contraseña de acceso al servicio
@@ -181,7 +176,7 @@ CMD ["apachectl", "-D", "FOREGROUND"]
 
 ## <a id="va1" href="https://github.com/Jhamil9/Proyecto-PUK/tree/e09914822d33f31c20c951bd1c2ee2b79de4f1ad/Docker/fail2ban">Fail2Ban</a>
 
-```
+```bash
 FROM ubuntu:22.04
 RUN apt-get update && \
     apt-get install -y fail2ban iproute2 && \
@@ -191,7 +186,7 @@ CMD ["fail2ban-server", "-f", "-x"]
 
 ## <a id="va1" href="https://github.com/Jhamil9/Proyecto-PUK/tree/e09914822d33f31c20c951bd1c2ee2b79de4f1ad/Docker/nmap-detector">IDS</a>
 
-```
+```bash
 FROM python:3.9-slim
 RUN apt-get update && \
     apt-get install -y libpcap0.8 && \
@@ -205,7 +200,7 @@ ENTRYPOINT ["python", "ids_script.py"]
 
 ## <a id="va1" href="https://github.com/Jhamil9/Proyecto-PUK/tree/e09914822d33f31c20c951bd1c2ee2b79de4f1ad/Docker/elk">ELK stack</a>
 
-```
+```bash
 FROM docker.elastic.co/logstash/logstash:7.17.28
 
 COPY eventos.conf /usr/share/logstash/pipeline/logstash.conf
