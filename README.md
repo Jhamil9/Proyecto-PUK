@@ -88,7 +88,7 @@ Esta solución se ha elegido porque integra varias tecnologías y herramientas d
 ```
 ![](img/)
 
-- **Fail2Ban:** Automatiza la detección y mitigación de ataques basados en patrones de logs y bloqueando IPs que realizan intentos como el acceso no autorizado a a web.
+- **Fail2Ban:** Automatiza la detección y mitigación de ataques basados en patrones de logs y bloqueando IPs que realizan intentos como el acceso no autorizado a la web.
 
 ```
 ├───fail2ban
